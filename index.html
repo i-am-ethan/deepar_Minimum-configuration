@@ -1,38 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
     <title>DeepAR</title>
-    <style>
-      body {
-        margin: 0px;
-        padding: 0px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <canvas id="deepar-canvas"></canvas>
-
+    <div id="container">
+      <canvas id="deepar-canvas"></canvas>
+    </div>
+    <div id="controler">
+      <!-- ボタンを押すとchangeEffectという関数が実行されるボタンを配置　 -->
+      <button id="btn" type="button" onclick="changeEffect()">change</button>
+    </div>
+    <!-- ::::::::::::script::::::::::  -->
     <script type="text/javascript" src="lib/deepar.js"></script>
-    <script type="text/javascript">
-      // Initialize the DeepAR object
-      var deepAR = DeepAR({
-        licenseKey: "your license key goes here",
-        canvasWidth: window.innerWidth,
-        canvasHeight: window.innerHeight,
-        canvas: document.getElementById("deepar-canvas"),
-        numberOfFaces: 1, // how many faces we want to track min 1, max 4
-        onInitialize: function () {
-          // start video immediately after the initalization, mirror = true
-          deepAR.startVideo(true);
-          // load the aviators effect on the first face into slot 'slot'
-          deepAR.switchEffect(0, "slot", "./aviators", function () {
-            // effect loaded
-          });
-        },
-      });
-
-      // download the face tracking model
-      deepAR.downloadFaceTrackingModel("models/models-68-extreme.bin");
-    </script>
+    <script type="text/javascript" src="mian.js"></script>
   </body>
 </html>

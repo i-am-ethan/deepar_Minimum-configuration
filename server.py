@@ -12,5 +12,4 @@ httpd = SocketServer.TCPServer(("", PORT), Handler)
 
 print("serving at port", PORT)
 httpd.serve_forever()
-# print "serving at port", PORT
-# httpd.serve_forever()
+

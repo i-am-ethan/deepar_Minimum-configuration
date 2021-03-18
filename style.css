@@ -1,0 +1,20 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: aqua;
+  text-align: center;
+  margin: 0 auto;
+}
+#container {
+  background-color: aquamarine;
+}
+#controler {
+  background-color: blanchedalmond;
+}
+/* canvas  */
+#deepar-canvas {
+  text-align: center;
+  margin: 0 auto;
+  width: 70%;
+  height: 500px;
+}
